@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="icon" href="./assets/a31253a1-357c-4d98-a2f1-c6d91db0600b.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devil's Dice</title>
+  </head>
+  <body>
+    <div class="no-landscape">
+      <h2 style="color: #a0c25b;">Please rotate your device to landscape mode</h2>
+    </div>
+    <div class="game-area">
+      <div class="dice-zone" id="enemy">
+        <div class="dice-div">
+          <div class="dice-type-div">
+            <span id="dice-type-1-b"></span>
+          </div>
+          <div class="dice-hp-div">
+            <span id="current-hp-1-b"></span> / <span id="max-hp-1-b"></span>
+          </div>
+        </div>
+        <div class="dice-div">
+          <div class="dice-type-div">
+            <span id="dice-type-2-b"></span>
+          </div>
+          <div class="dice-hp-div">
+            <span id="current-hp-2-b"></span> / <span id="max-hp-2-b"></span>
+          </div>
+        </div>
+        <div class="dice-div">
+          <div class="dice-type-div">
+            <span id="dice-type-3-b"></span>
+          </div>
+          <div class="dice-hp-div">
+            <span id="current-hp-3-b"></span> / <span id="max-hp-3-b"></span>
+          </div>
+        </div>
+      </div>
+      <div class="roll-zone">
+        <div class="dice-tray" id="dice-tray-player">
+          <div class="dice-tray-item" data-index="1" id="dt-b-1"></div>
+          <div class="dice-tray-item" data-index="2" id="dt-b-2"></div>
+          <div class="dice-tray-item" data-index="3" id="dt-b-3"></div>
+          <div class="dice-tray-item" data-index="4" id="dt-b-4"></div>
+          <div class="dice-tray-item" data-index="5" id="dt-b-5"></div>
+          <div class="dice-tray-item" data-index="6" id="dt-b-6"></div>
+        </div>
+        <div class="roll-tray">
+          <div class="rolltray-button-div-b">
+            <div class="div-full-col-4">
+              <button id="select-dice-btn-b-1" style="grid-column: 1"></button>
+              <button id="select-dice-btn-b-2" style="grid-column: 2"></button>
+              <button id="select-dice-btn-b-3" style="grid-column: 3"></button>
+              <button id="select-dice-btn-b-4" style="grid-column: 4">
+                Roll SP
+              </button>
+            </div>
+            <div class="div-full center">
+              <span id="alert-b"></span>
+            </div>
+          </div>
+          <div class="game-start div-full" id="game-start-id">
+            <span id="alert-gs"></span>
+            <button id="btn-gs"></button>
+          </div>
+          <div class="roll-tray-roll-div" id="roll-tray-roll-div-id">
+            <div class="dice-tray-item" id="dice-d"></div>
+            <div class="dice-tray-item" id="dice-m"></div>
+            <div class="dice-tray-item" id="dice-s"></div>
+            <div class="dice-tray-item" id="dice-total"></div>
+          </div>
+          <div class="rolltray-button-div-a">
+            <div class="div-full center">
+              <span id="alert-a"></span>
+            </div>
+            <div class="div-full-col-4">
+              <button id="select-dice-btn-a-1" style="grid-column: 1"></button>
+              <button id="select-dice-btn-a-2" style="grid-column: 2"></button>
+              <button id="select-dice-btn-a-3" style="grid-column: 3"></button>
+              <button id="select-dice-btn-a-4" style="grid-column: 4">
+                Roll SP
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="dice-tray" id="dice-tray-enemy">
+          <div class="dice-tray-item" data-index="1" id="dt-a-1"></div>
+          <div class="dice-tray-item" data-index="2" id="dt-a-2"></div>
+          <div class="dice-tray-item" data-index="3" id="dt-a-3"></div>
+          <div class="dice-tray-item" data-index="4" id="dt-a-4"></div>
+          <div class="dice-tray-item" data-index="5" id="dt-a-5"></div>
+          <div class="dice-tray-item" data-index="6" id="dt-a-6"></div>
+        </div>
+      </div>
+      <div class="dice-zone" id="player">
+        <div class="dice-div">
+          <div class="dice-hp-div">
+            <span id="current-hp-1-a"></span> / <span id="max-hp-1-a"></span>
+          </div>
+          <div class="dice-type-div">
+            <span id="dice-type-1-a"></span>
+          </div>
+        </div>
+        <div class="dice-div">
+          <div class="dice-hp-div">
+            <span id="current-hp-2-a"></span> / <span id="max-hp-2-a"></span>
+          </div>
+          <div class="dice-type-div">
+            <span id="dice-type-2-a"></span>
+          </div>
+        </div>
+        <div class="dice-div">
+          <div class="dice-hp-div">
+            <span id="current-hp-3-a"></span> / <span id="max-hp-3-a"></span>
+          </div>
+          <div class="dice-type-div">
+            <span id="dice-type-3-a"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="margin div-full-col-5">
+      <span>Game Speed: </span>
+      <button class="clicked" id="slow" onclick="Speed(1000)">Slow</button>
+      <button class="clicked" id="medium" onclick="Speed(750)">Medium</button>
+      <button class="clicked" id="fast" onclick="Speed(375)">Fast</button>
+    </div>
+  </body>
+  <script src="./js/scripts.js"></script>
+</html>
